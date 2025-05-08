@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Vital Flow AI brand colors
+				vitalflow: {
+					'light-blue': '#d1f1ff',  // Light blue from the logo background
+					'blue': '#87d4ff',        // Medium blue for accents
+					'dark': '#111111',        // Dark for text
 				}
 			},
 			borderRadius: {
@@ -84,12 +91,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-flow': 'linear-gradient(90deg, #d1f1ff 0%, #87d4ff 100%)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
