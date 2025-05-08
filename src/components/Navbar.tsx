@@ -25,8 +25,9 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <a href="#home" className="text-vitalflow-dark hover:text-blue-600 transition-colors">Home</a>
             <a href="#services" className="text-vitalflow-dark hover:text-blue-600 transition-colors">Services</a>
+            <a href="#process" className="text-vitalflow-dark hover:text-blue-600 transition-colors">Process</a>
             <a href="#about" className="text-vitalflow-dark hover:text-blue-600 transition-colors">About</a>
-            <a href="#testimonials" className="text-vitalflow-dark hover:text-blue-600 transition-colors">Testimonials</a>
+            <a href="#faq" className="text-vitalflow-dark hover:text-blue-600 transition-colors">FAQ</a>
             <a href="#contact" className="text-vitalflow-dark hover:text-blue-600 transition-colors">Contact</a>
           </div>
           
@@ -69,6 +70,13 @@ const Navbar = () => {
                 Services
               </a>
               <a 
+                href="#process" 
+                className="text-vitalflow-dark hover:text-blue-600 transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Process
+              </a>
+              <a 
                 href="#about" 
                 className="text-vitalflow-dark hover:text-blue-600 transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
@@ -76,11 +84,11 @@ const Navbar = () => {
                 About
               </a>
               <a 
-                href="#testimonials" 
+                href="#faq" 
                 className="text-vitalflow-dark hover:text-blue-600 transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Testimonials
+                FAQ
               </a>
               <a 
                 href="#contact" 
