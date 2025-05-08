@@ -1,36 +1,37 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { MessageSquare, Mic, Phone, TrendingUp, Users } from "lucide-react";
 
 const serviceItems = [
   {
-    title: "AI Workflow Automation",
-    description: "Streamline your business processes with custom AI workflows that eliminate repetitive tasks and improve efficiency.",
-    icon: "🔄"
+    title: "Voice AI Agent",
+    description: "Deploy intelligent voice assistants that can handle patient inquiries, schedule appointments, and provide information naturally and efficiently.",
+    icon: <Mic className="h-8 w-8 text-blue-600" />
   },
   {
-    title: "Smart Data Analysis",
-    description: "Transform raw data into actionable insights using advanced AI algorithms tailored to your business goals.",
-    icon: "📊"
+    title: "Lead Generation",
+    description: "Leverage AI-powered analytics to identify and engage potential clients, expanding your patient base and growing your practice with qualified leads.",
+    icon: <Users className="h-8 w-8 text-blue-600" />
   },
   {
-    title: "Natural Language Processing",
-    description: "Implement conversational AI solutions that enhance customer service and internal communications.",
-    icon: "💬"
+    title: "AI Chatbot Solutions",
+    description: "Implement conversational AI chatbots that provide instant responses to patient questions, schedule appointments, and gather important information.",
+    icon: <MessageSquare className="h-8 w-8 text-blue-600" />
   },
   {
-    title: "Computer Vision Solutions",
-    description: "Use AI-powered image and video analysis to detect patterns, ensure quality control, or enhance security.",
-    icon: "👁️"
+    title: "Appointment Reminders",
+    description: "Boost attendance rates with personalized AI-powered appointment reminders that reduce no-shows and keep your schedule running efficiently.",
+    icon: <TrendingUp className="h-8 w-8 text-blue-600" />
+  },
+  {
+    title: "Patient Follow-up Automation",
+    description: "Automate post-visit follow-ups to improve patient care, gather feedback, and ensure proper recovery without overwhelming your staff.",
+    icon: <Phone className="h-8 w-8 text-blue-600" />
   },
   {
     title: "Custom AI Development",
-    description: "Build proprietary AI models designed specifically for your industry challenges and business needs.",
-    icon: "⚙️"
-  },
-  {
-    title: "AI Integration Services",
-    description: "Seamlessly integrate AI solutions with your existing software infrastructure and business processes.",
-    icon: "🔌"
+    description: "Build proprietary AI models designed specifically for your healthcare practice's unique challenges and operational needs.",
+    icon: <div className="text-3xl">⚙️</div>
   }
 ];
 
@@ -42,7 +43,7 @@ const ServicesSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             We deliver cutting-edge AI automation solutions that drive business efficiency, 
-            innovation, and growth across various industries.
+            innovation, and growth for healthcare providers and practices.
           </p>
         </div>
         
@@ -50,7 +51,7 @@ const ServicesSection = () => {
           {serviceItems.map((service, index) => (
             <Card key={index} className="border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
               <CardHeader>
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="mb-4">{service.icon}</div>
                 <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
